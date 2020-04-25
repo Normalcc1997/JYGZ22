@@ -90,24 +90,9 @@ export default {
           }
         },
         legend: {
-          data: ['全市', '青阳', '贵池区', '石台', '东至', '九华山']
+          data: ['青阳', '贵池区', '石台', '东至', '九华山']
         },
-        series: [{
-          name: '全市', itemStyle: {
-            normal: {
-              color: '#FF005A',
-              lineStyle: {
-                color: '#FF005A',
-                width: 2
-              }
-            }
-          },
-          smooth: true,
-          type: 'line',
-          data: expectedData,
-          animationDuration: 2800,
-          animationEasing: 'cubicInOut'
-        },
+        series: [
         {
           name: '青阳',
           smooth: true,

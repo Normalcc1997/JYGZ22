@@ -9,20 +9,7 @@
           <div class="card-panel-text">
             ITV
           </div>
-          <count-to :start-val="0" :end-val="786" :duration="2600" class="card-panel-num" />
-        </div>
-      </div>
-    </el-col>
-    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('messages')">
-        <div class="card-panel-icon-wrapper icon-message">
-          <svg-icon icon-class="message" class-name="card-panel-icon" />
-        </div>
-        <div class="card-panel-description">
-          <div class="card-panel-text">
-            宽带
-          </div>
-          <count-to :start-val="0" :end-val="1120" :duration="3000" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="51" :duration="2600" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -35,7 +22,7 @@
           <div class="card-panel-text">
             天翼看家
           </div>
-          <count-to :start-val="0" :end-val="866" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="63" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
@@ -48,7 +35,7 @@
           <div class="card-panel-text">
             智能组网
           </div>
-          <count-to :start-val="0" :end-val="1446" :duration="3600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="111" :duration="3600" class="card-panel-num" />
         </div>
       </div>
     </el-col>

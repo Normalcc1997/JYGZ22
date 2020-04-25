@@ -22,14 +22,7 @@
           <pie-chart />
         </div>
       </el-col>
-      <el-col :xs="24" :sm="24" :lg="8">
-        <div class="chart-wrapper">
-          <div class="title-container">
-            <h3 class="title">宽带到达量</h3>
-          </div>
-          <pie1 />
-        </div>
-      </el-col>
+    
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
           <div class="title-container">
@@ -73,7 +66,6 @@ import PanelGroup from './components/PanelGroup'
 import LineChart from './components/LineChart'
 import RaddarChart from './components/RaddarChart'
 import PieChart from './components/PieChart'
-import pie1 from './components/pie1'
 import pie2 from './components/pie2'
 import pie3 from './components/pie3'
 
@@ -84,36 +76,36 @@ import BoxCard from './components/BoxCard'
 
 const lineChartData = {
   newVisitis: {
-    expectedData: [0, 4, 17, 26, 27, 27, 30, 32, 39, 43, 46, 51, 51],
-    actualData: [0, 0, 1, 5, 6, 6, 7, 7, 8, 9, 9, 9, 9],
-    guichiquData: [0, 0, 1, 4, 4, 4, 5, 7, 11, 12, 15, 19, 19],
-    shitaiData: [0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 3, 3, 3],
-    dongzhiData: [0, 0, 2, 2, 6, 8, 8, 9, 12, 13, 13, 13, 13],
+    // expectedData: [0, 4, 17, 26, 27, 27, 30, 32, 39, 43, 46, 51, 51],
+    actualData: [0, 0, 1, 4, 5, 1, 1, 0, 1, 1, 0, 0, 0],
+    guichiquData: [0, 0, 1, 3, 0, 0, 1, 2, 4, 1, 3, 4, 0],
+    shitaiData: [0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0],
+    dongzhiData: [0, 0, 2, 0, 4, 2, 2, 1, 3, 1, 0, 0, 0],
     jiuhuashanData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   },
-  messages: {
-    expectedData: [0, 0, 4, 22, 37, 45, 46, 49, 52, 67, 71, 81, 86],
-    actualData: [0, 0, 0, 3, 8, 9, 9, 10, 11, 12, 14, 15, 15],
-    guichiquData: [0, 0, 1, 4, 12, 15, 15, 16, 18, 25, 26, 33, 37],
-    shitaiData: [0, 0, 0, 0, 0, 1, 1, 1, 1, 4, 5, 5, 5],
-    dongzhiData: [0, 0, 3, 15, 17, 18, 19, 20, 20, 24, 24, 26, 27],
-    jiuhuashanData: [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2]
-  },
+  // messages: {
+  //   // expectedData: [0, 0, 4, 22, 37, 45, 46, 49, 52, 67, 71, 81, 86],
+  //   actualData: [0, 0, 0, 3, 8, 9, 9, 10, 11, 12, 14, 15, 15],
+  //   guichiquData: [0, 0, 1, 4, 12, 15, 15, 16, 18, 25, 26, 33, 37],
+  //   shitaiData: [0, 0, 0, 0, 0, 1, 1, 1, 1, 4, 5, 5, 5],
+  //   dongzhiData: [0, 0, 3, 15, 17, 18, 19, 20, 20, 24, 24, 26, 27],
+  //   jiuhuashanData: [0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2]
+  // },
   purchases: {
-    expectedData: [0, 0, 8, 17, 23, 28, 33, 35, 48, 54, 61, 63, 63],
-    actualData: [0, 0, 2, 6, 7, 8, 10, 10, 11, 14, 15, 15, 15],
-    guichiquData: [0, 0, 3, 7, 7, 8, 10, 11, 18, 20, 24, 26, 26],
-    shitaiData: [0, 0, 3, 3, 6, 9, 9, 9, 11, 12, 12, 12, 12],
-    dongzhiData: [0, 0, 0, 1, 2, 2, 3, 3, 6, 6, 8, 8, 8],
-    jiuhuashanData: [0, 0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2]
+    // expectedData: [0, 0, 8, 17, 23, 28, 33, 35, 48, 54, 61, 63, 63],
+    actualData: [0, 0, 2, 4, 1, 1, 2, 0, 1, 3, 1, 0, 0],
+    guichiquData: [0, 0, 3, 4, 0, 1, 2, 1, 7, 2, 4, 2, 2],
+    shitaiData: [0, 0, 3, 0, 3, 3, 0, 0, 2, 1, 0, 0, 0],
+    dongzhiData: [0, 0, 0, 1, 1, 0, 1, 1, 3, 0, 2, 0, 0],
+    jiuhuashanData: [0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0]
   },
   shoppings: {
-    expectedData: [0, 1, 12, 29, 38, 43, 50, 60, 79, 90, 100, 111, 111],
-    actualData: [0, 0, 4, 11, 14, 15, 16, 18, 22, 26, 28, 28, 28],
-    guichiquData: [0, 1, 6, 11, 11, 13, 18, 24, 32, 37, 42, 53, 53],
-    shitaiData: [0, 0, 2, 2, 6, 8, 8, 9, 12, 13, 13, 13, 13],
-    dongzhiData: [0, 0, 0, 4, 6, 6, 7, 8, 11, 13, 16, 16, 16],
-    jiuhuashanData: [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    // expectedData: [0, 1, 12, 29, 38, 43, 50, 60, 79, 90, 100, 111, 111],
+    actualData: [0, 0, 4, 7, 3, 1, 1, 2, 4, 4, 2, 0, 0],
+    guichiquData: [0, 1, 5, 5, 0, 2, 5, 6, 8, 5, 5, 11, 0],
+    shitaiData: [0, 0, 2, 0, 4, 2, 0, 1, 3, 1, 0, 0, 0],
+    dongzhiData: [0, 0, 0, 4, 2, 0, 1, 1, 3, 2, 3, 0, 10],
+    jiuhuashanData: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
   }
 }
 
@@ -125,7 +117,7 @@ export default {
     LineChart,
     RaddarChart,
     PieChart,
-    pie1,
+    
     pie2,
     pie3,
     BarChart,
