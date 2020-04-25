@@ -53,21 +53,22 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['贵池区', '东至', '青阳', '石台', '九华山']
+          data: ['市区/12881', '东至/7589', '青阳/5045', '石台/3834', '九华山/397']
         },
         series: [
           {
             name: '智能组网',
             type: 'pie',
             roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
+            radius: [35, 100],
+            center: ['50%', '50%'],
             data: [
-              { value: 10413, name: '贵池区' },
-              { value: 6129, name: '东至' },
-              { value: 4079, name: '青阳' },
-              { value: 3100, name: '石台' },
-              { value: 321, name: '九华山' }
+              { value: 12881, name: '市区/12881' },
+              { value: 7589, name: '东至/7589' },
+              { value: 5045, name: '青阳/5045' },
+              { value: 3834, name: '石台/3834' },
+              { value: 397, name: '九华山/397' }
+            
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

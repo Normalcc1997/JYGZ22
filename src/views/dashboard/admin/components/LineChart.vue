@@ -61,10 +61,10 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
       this.setOptions(this.chartData)
     },
-    setOptions({ expectedData, actualData, guichiquData, shitaiData, dongzhiData, jiuhuashanData } = {}) {
+    setOptions({ expectedData, jiuhuashanData,dongzhiData, guichiquData, shitaiData } = {}) {
       this.chart.setOption({
         xAxis: {
-          data: ['8：00', '9：00', '10：00', '11：00', '12：00', '13：00', '14：00', '15：00', '16：00', '17：00', '18：00', '19：00', '20：00'],
+          data: ['8：00', '9：00', '10：00', '11：00', '12：00', '13：00', '14：00', '15：00', '16：00', '17：00', '18：00', '19：00'],
           boundaryGap: false,
           axisTick: {
             show: false
@@ -90,11 +90,11 @@ export default {
           }
         },
         legend: {
-          data: ['青阳', '贵池区', '石台', '东至', '九华山']
+          data: ['今日看家', '今日组网', '昨日看家', '昨日组网']
         },
         series: [
         {
-          name: '青阳',
+          name: '今日看家',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -109,11 +109,11 @@ export default {
               }
             }
           },
-          data: actualData,
+          data: jiuhuashanData,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
         }, {
-          name: '贵池区',
+          name: '昨日看家',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -128,12 +128,12 @@ export default {
               }
             }
           },
-          data: guichiquData,
+          data: shitaiData,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
 
         }, {
-          name: '石台',
+          name: '今日组网',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -148,12 +148,12 @@ export default {
               }
             }
           },
-          data: shitaiData,
+          data: dongzhiData,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
 
         }, {
-          name: '东至',
+          name: '昨日组网',
           smooth: true,
           type: 'line',
           itemStyle: {
@@ -168,31 +168,33 @@ export default {
               }
             }
           },
-          data: dongzhiData,
+          data: guichiquData,
           animationDuration: 2800,
           animationEasing: 'quadraticOut'
 
-        }, {
-          name: '九华山',
-          smooth: true,
-          type: 'line',
-          itemStyle: {
-            normal: {
-              color: '#2E2E2E',
-              lineStyle: {
-                color: '#2E2E2E',
-                width: 2
-              },
-              areaStyle: {
-                color: '#f3f8fa'
-              }
-            }
-          },
-          data: jiuhuashanData,
-          animationDuration: 2800,
-          animationEasing: 'quadraticOut'
+        },
+        //  {
+        //   name: '九华山',
+        //   smooth: true,
+        //   type: 'line',
+        //   itemStyle: {
+        //     normal: {
+        //       color: '#2E2E2E',
+        //       lineStyle: {
+        //         color: '#2E2E2E',
+        //         width: 2
+        //       },
+        //       areaStyle: {
+        //         color: '#f3f8fa'
+        //       }
+        //     }
+        //   },
+        //   data: jiuhuashanData,
+        //   animationDuration: 2800,
+        //   animationEasing: 'quadraticOut'
 
-        }]
+        // }
+        ]
       })
     }
   }

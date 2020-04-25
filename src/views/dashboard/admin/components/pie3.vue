@@ -53,21 +53,22 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['贵池区', '东至', '青阳', '石台', '九华山']
+          data: ['市区/1931', '东至/1776', '青阳/2228', '石台/1384', '九华山/109']
         },
         series: [
           {
             name: '天翼看家',
             type: 'pie',
             roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
-            data: [
-              { value: 1563, name: '贵池区' },
-              { value: 1438, name: '东至' },
-              { value: 1804, name: '青阳' },
-              { value: 1088, name: '石台' },
-              { value: 68, name: '九华山' }
+            radius: [35, 100],
+            center: ['50%', '50%'],
+             data: [
+              { value: 1931, name: '市区/1931' },
+              { value: 1776, name: '东至/1776' },
+              { value: 2228, name: '青阳/2228' },
+              { value: 1384, name: '石台/1384' },
+              { value: 109, name: '九华山/109' }
+             
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

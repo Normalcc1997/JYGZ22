@@ -52,7 +52,8 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['贵池区', '东至', '青阳', '石台', '九华山']
+        
+          data: ['青阳', '东至', '市区', '石台','九华山']
         },
         series: [
           {
@@ -62,11 +63,11 @@ export default {
             radius: [15, 95],
             center: ['50%', '38%'],
             data: [
-              { value: 86569, name: '贵池区' },
-              { value: 52163, name: '东至' },
-              { value: 43478, name: '青阳' },
-              { value: 20335, name: '石台' },
-              { value: 8045, name: '九华山' }
+              { value: 86569, name: '市区' },
+              { value: 52163, name: '昨日组网' },
+              { value: 43478, name: '今日看家' },
+              { value: 20335, name: '昨日看家' },
+             
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

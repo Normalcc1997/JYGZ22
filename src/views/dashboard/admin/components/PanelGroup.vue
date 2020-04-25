@@ -1,18 +1,35 @@
 <template>
   <el-row :gutter="40" class="panel-group">
+    
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('newVisitis')">
-        <div class="card-panel-icon-wrapper icon-people">
-          <svg-icon icon-class="peoples" class-name="card-panel-icon" />
+      <div class="card-panel" @click="handleSetLineChartData('purchases')">
+        <div class="card-panel-icon-wrapper icon-money">
+          <svg-icon icon-class="eye-open" class-name="card-panel-icon" />
+          <!-- <svg-icon icon-class="chart" /> -->
+          <!-- <i class="el-icon-platform-eleme" /> -->
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            ITV
+            昨日天翼看家
           </div>
-          <count-to :start-val="0" :end-val="51" :duration="2600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="88" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
+    <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
+      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
+        <div class="card-panel-icon-wrapper icon-shopping">
+          <svg-icon icon-class="nested" class-name="card-panel-icon" />
+        </div>
+        <div class="card-panel-description">
+          <div class="card-panel-text">
+            昨日智能组网
+          </div>
+          <count-to :start-val="0" :end-val="101" :duration="3600" class="card-panel-num" />
+        </div>
+      </div>
+    </el-col>
+       
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
       <div class="card-panel" @click="handleSetLineChartData('purchases')">
         <div class="card-panel-icon-wrapper icon-money">
@@ -20,22 +37,23 @@
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            天翼看家
+            昨日智家发展拉动收入
           </div>
-          <count-to :start-val="0" :end-val="63" :duration="3200" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="2480" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
+       
     <el-col :xs="12" :sm="12" :lg="6" class="card-panel-col">
-      <div class="card-panel" @click="handleSetLineChartData('shoppings')">
+      <div class="card-panel" @click="handleSetLineChartData('purchases')">
         <div class="card-panel-icon-wrapper icon-shopping">
           <svg-icon icon-class="shopping" class-name="card-panel-icon" />
         </div>
         <div class="card-panel-description">
           <div class="card-panel-text">
-            智能组网
+            昨日拆机离网
           </div>
-          <count-to :start-val="0" :end-val="111" :duration="3600" class="card-panel-num" />
+          <count-to :start-val="0" :end-val="0" :duration="3200" class="card-panel-num" />
         </div>
       </div>
     </el-col>
